@@ -83,24 +83,13 @@ DB_NAME = config('DB_NAME')
 DB_USER = config('DB_USER')
 DB_PASSWORD = config('DB_PASSWORD')
 
-if DEV:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-elif PROD:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': DB_NAME,  # Database name
-            'USER': DB_USER,
-            'PASSWORD': DB_PASSWORD,
-            'HOST': 'localhost',
-            'PORT': '5432',
-        }
-    }
+}
 
 
 # Password validation
