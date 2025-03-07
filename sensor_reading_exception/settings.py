@@ -29,7 +29,8 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 DEV=config('DEV', default=False, cast=bool)
 PROD=config('PROD', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['18.234.191.210']
+ALLOWED_HOSTS = ['18.234.191.210',
+                'api-sensorman-machine1.maintonia.com']
 
 
 # Application definition
